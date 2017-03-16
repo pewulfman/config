@@ -1,0 +1,27 @@
+### Privacy mode ###
+function privacy_mode() {
+	if [[ "${ZSH_PRIVACY_MODE}ÂCÂCÂCÂCÂCÂC" != "1" ]] ; then
+		echo "Type 'exit' to disable privacy mode"
+		ZSH_PRIVACY_MODE="1" ZSH_NO_DEBUG="1" zsh
+		echo
+		echo "Privacy mode disabled."
+	else
+		echo "You're already in privacy mode !"
+	fi
+}
+
+if [[ "$OSTYPE" == "darwin"* ]] ; then
+	alias ls="ls -G"
+elif [[ "$OSTYPE" == "solaris2.10" ]] ; then
+	alias ls="ls -F"
+else
+	alias ls="ls --color=auto"
+	alias grep="grep --color=auto"
+fi
+
+alias "cd.."="cd .."
+alias "ll"="ls -l"
+alias "recd"='cd $PWD'
+alias "ls-l"="ls -l"
+alias python=python3
+
