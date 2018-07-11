@@ -5,8 +5,6 @@ function debugPrint() {
 	[[ -f $HOME/.zsh/debug && "${ZSH_NO_DEBUG}" != "1" ]] && echo -e $@
 }
 
-#echo
-#echo -n "Welcome to $OSTYPE, using zsh"
 [[ -f $HOME/.zsh/debug && "${ZSH_NO_DEBUG}" != "1" ]] && echo -n " (debug mode)"
 [[ "${ZSH_PRIVACY_MODE}" == "1" ]] && echo -n " (privacy mode)"
 
@@ -22,7 +20,6 @@ fi
 if [ -f ~/.zsh_functions ]; then
 	. ~/.zsh_funcions
 fi
-
 
 if [ -f ~/.profile ]; then
 	. ~/.profile
@@ -46,7 +43,7 @@ debugPrint "=> Setting up environment variables ..."
 if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
 else
-	export EDITOR='mvim'
+	export EDITOR='vim'
 fi
 
 #if [[ "${EDITOR}" == "" ]] ; then

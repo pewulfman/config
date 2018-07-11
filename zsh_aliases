@@ -23,5 +23,3 @@ alias "cd.."="cd .."
 alias "ll"="ls -l"
 alias "recd"='cd $PWD'
 alias "ls-l"="ls -l"
-alias python=python3
-
