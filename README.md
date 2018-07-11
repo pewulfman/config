@@ -1,5 +1,5 @@
 # dotfiles
-Yet another dotfile repository
+Yet another dotfiles repository
 
 This repository aims at keeping my config files to deploy rapidely on my computer.
 Feel free to copy and use them for yourself.
